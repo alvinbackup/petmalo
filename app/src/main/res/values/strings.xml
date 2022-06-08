@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PET-Malo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_stores_location">Map</string>
+    <string name="api_key">AIzaSyCDB4QMQz10Lkg2KMIQLW0pxARkQlDQ8Q4</string>
+    <string name="title_activity_mapstore">Map</string>
+    <string name="messageWithlink"><a href="https://pet-malo.000webhostapp.com">For Store Registration</a></string>
+
+</resources>

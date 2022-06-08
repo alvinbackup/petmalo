@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".petcard"
+    android:orientation="vertical"
+    android:background="@drawable/loginreg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:src="@drawable/card"
+                android:layout_marginBottom="10dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/appbq"
+                android:orientation="vertical"
+                android:padding="25dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Pet Name:"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/petname"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:paddingStart="10dp"
+                    android:drawableStart="@drawable/petname_icon"
+                    android:textColorHint="#837171"
+                    android:textColor="@color/black"
+                    android:background="@drawable/custom_input"
+                     />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="Birthday:"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/birthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:paddingStart="10dp"
+                    android:layout_gravity="right"
+                    android:textColorHint="#837171"
+                    android:drawableStart="@drawable/birthday_icon"
+                    android:textColor="@color/black"
+                    android:background="@drawable/custom_input"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="Gender:"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="right"
+                    android:drawableStart="@drawable/gender_icon"
+                    android:textColorHint="#837171"
+                    android:textColor="@color/black"
+                    android:paddingStart="10dp"
+                    android:background="@drawable/custom_input"
+                   />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="Breed:"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/bread"
+                    android:paddingStart="10dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="right"
+                    android:textColorHint="#837171"
+                    android:textColor="@color/black"
+                    android:drawableStart="@drawable/petname_icon"
+                    android:background="@drawable/custom_input"
+                    android:layout_width="match_parent"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+
+                    android:text="Species"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:id="@+id/species"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="right"
+                    android:layout_marginBottom="25dp"
+                    android:textColorHint="#837171"
+                    android:textColor="@color/black"
+                    android:background="@drawable/custom_input"
+                    android:paddingStart="10dp"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Vaccination"
+                        android:textColor="@color/black"
+                        android:textSize="15dp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="Date:"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/date"
+                    android:layout_width="match_parent"
+                    android:paddingStart="10dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="right"
+                    android:textColorHint="#837171"
+                    android:textColor="@color/black"
+                    android:drawableStart="@drawable/date_icon"
+                    android:background="@drawable/custom_input"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="Againts:"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/againts"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="right"
+                    android:textColorHint="#837171"
+                    android:textColor="@color/black"
+                    android:background="@drawable/custom_input"
+                    android:drawableStart="@drawable/againts_icon"
+                    android:paddingStart="10dp"
+                     />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="Manufacturer:"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/manufacturer"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="right"
+                    android:textColorHint="#837171"
+                    android:textColor="@color/black"
+                    android:background="@drawable/custom_input"
+                     />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+
+                    android:text="Veterinarian:"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+
+                <EditText
+                    android:id="@+id/veterinarian"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="right"
+                    android:layout_marginBottom="25dp"
+                    android:textColorHint="#837171"
+                    android:textColor="@color/black"
+                    android:paddingStart="10dp"
+                    android:background="@drawable/custom_input"
+                     />
+
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="submit"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:onClick="submit"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

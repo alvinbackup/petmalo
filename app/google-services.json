@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "620020755623",
+    "project_id": "pet-malo-9e5c0",
+    "storage_bucket": "pet-malo-9e5c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:620020755623:android:67c335e96b4b2f6f303f82",
+        "android_client_info": {
+          "package_name": "com.example.pet_malo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "620020755623-nok1ub70ma7da3v99m18bvdanan87m9e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmT95FhhaP8IM1zR-eue4p1Tq2dOC1OdY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "620020755623-nok1ub70ma7da3v99m18bvdanan87m9e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
