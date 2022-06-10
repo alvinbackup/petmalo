@@ -34,9 +34,9 @@ import java.util.Map;
 
 public class petcard extends AppCompatActivity {
 
-    EditText pet_name, pet_birthday, pet_gender, pet_bread, pet_species, pet_date, pet_againts, pet_manufacturer, pet_veterinarian;
+    EditText pet_name, pet_birthday, pet_gender, pet_breed, pet_species, pet_date, pet_againts, pet_manufacturer, pet_veterinarian;
     Calendar calendar;
-    String str_name, str_birthday, str_gender, str_bread, str_species, str_date, str_manufacturer, str_againts, str_veterinarian;
+    String str_name, str_birthday, str_gender, str_breed, str_species, str_date, str_manufacturer, str_againts, str_veterinarian;
 
     private static final String url = "https://petmalo.000webhostapp.com/petcard.php";
 
@@ -51,7 +51,7 @@ public class petcard extends AppCompatActivity {
         pet_name = findViewById(R.id.petname);
 
         pet_gender = findViewById(R.id.gender);
-        pet_bread = findViewById(R.id.bread);
+        pet_breed = findViewById(R.id.breed);
         pet_species = findViewById(R.id.species);
         pet_againts = findViewById(R.id.againts);
         pet_manufacturer = findViewById(R.id.manufacturer);
@@ -120,7 +120,7 @@ public class petcard extends AppCompatActivity {
             Toast.makeText(this, "Enter Pet Name", Toast.LENGTH_SHORT).show();
         } else if (pet_birthday.getText().toString().equals("")) {
             Toast.makeText(this, "Enter Pet Birthday", Toast.LENGTH_SHORT).show();
-        } else if (pet_bread.getText().toString().equals("")) {
+        } else if (pet_breed.getText().toString().equals("")) {
             Toast.makeText(this, "Enter Pet Bread", Toast.LENGTH_SHORT).show();
         } else if (pet_gender.getText().toString().equals("")) {
             Toast.makeText(this, "Enter Pet Gender", Toast.LENGTH_SHORT).show();
@@ -138,7 +138,7 @@ public class petcard extends AppCompatActivity {
             progressDialog.show();
             str_name = pet_name.getText().toString().trim();
             str_birthday = pet_birthday.getText().toString().trim();
-            str_bread = pet_bread.getText().toString().trim();
+            str_breed = pet_breed.getText().toString().trim();
             str_gender = pet_gender.getText().toString().trim();
             str_species = pet_species.getText().toString().trim();
             str_date = pet_date.getText().toString().trim();
@@ -153,7 +153,7 @@ public class petcard extends AppCompatActivity {
                     Toast.makeText(petcard.this, response, Toast.LENGTH_SHORT).show();
                     pet_name.setText("");
                     pet_birthday.setText("");
-                    pet_bread.setText("");
+                    pet_breed.setText("");
                     pet_gender.setText("");
                     pet_species.setText("");
                     pet_date.setText("");
@@ -173,7 +173,7 @@ public class petcard extends AppCompatActivity {
                     Map<String, String> params = new HashMap<String, String>();
                     params.put("name", str_name);
                     params.put("birthday", str_birthday);
-                    params.put("bread", str_bread);
+                    params.put("breed", str_breed);
                     params.put("gender", str_gender);
                     params.put("species", str_species);
                     params.put("date", str_date);
