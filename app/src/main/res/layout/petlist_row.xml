@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="wrap_content"
-    android:background="@color/blue">
+    android:background="@drawable/petlist_shape"
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginTop="5dp"
+    >
 
     <LinearLayout
             android:layout_width="match_parent"
@@ -26,16 +29,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Species: "
-                    android:textColor="@color/black"
+                    android:textColor="@color/gray"
                     android:textStyle="bold"
-                    android:textSize="12dp"/>
+                    android:textSize="10dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Species"
-                    android:textSize="12sp"
-                    android:textColor="@color/black"
-                    android:id="@+id/petlist_species"/>
+                    android:textSize="10sp"
+                    android:textColor="@color/gray"
+                    android:id="@+id/petlist_species"
+                  />
             </LinearLayout>
             <TextView
                 android:layout_width="wrap_content"
@@ -43,6 +47,7 @@
                 android:text="Birthday"
                 android:textSize="12sp"
                 android:id="@+id/petlist_birthday"
+                android:visibility="gone"
 
                />
             <TextView
@@ -51,6 +56,7 @@
                 android:text="Gender"
                 android:textSize="12sp"
                 android:id="@+id/petlist_gender"
+                android:visibility="gone"
                 />
         <TextView
             android:layout_width="wrap_content"
@@ -58,6 +64,7 @@
             android:text="Breed"
             android:textSize="12sp"
             android:id="@+id/petlist_breed"
+            android:visibility="gone"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -65,6 +72,7 @@
             android:text="Againts"
             android:textSize="12sp"
             android:id="@+id/petlist_againts"
+            android:visibility="gone"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -72,6 +80,7 @@
             android:text="Manufacturer"
             android:textSize="12sp"
             android:id="@+id/petlist_manufacturer"
+            android:visibility="gone"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -79,6 +88,7 @@
             android:text="Veterinarian"
             android:textSize="12sp"
             android:id="@+id/petlist_veterinarian"
+            android:visibility="gone"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -86,6 +96,7 @@
             android:text="Date"
             android:textSize="12sp"
             android:id="@+id/petlist_date"
+            android:visibility="gone"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -93,8 +104,9 @@
             android:text="Email"
             android:textSize="12sp"
             android:id="@+id/petlist_email"
+            android:visibility="gone"
             />
 
         </LinearLayout>
-    </LinearLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 

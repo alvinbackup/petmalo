@@ -11,6 +11,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
@@ -26,6 +27,7 @@ public class petlist extends AppCompatActivity {
     RecyclerView recview;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +38,10 @@ public class petlist extends AppCompatActivity {
         //
         recview=(RecyclerView) findViewById(R.id.recview);
         recview.setLayoutManager(new LinearLayoutManager( this));
+
+
+
+
 
         processdata();
     }
