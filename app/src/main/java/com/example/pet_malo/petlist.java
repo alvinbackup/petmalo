@@ -11,6 +11,8 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +27,7 @@ import com.google.gson.GsonBuilder;
 public class petlist extends AppCompatActivity {
     private static final String url="https://petmalo.000webhostapp.com/android_map_markers/petcard_list.php";
     RecyclerView recview;
+    private LinearLayout emptyView;
 
 
 
@@ -39,6 +42,9 @@ public class petlist extends AppCompatActivity {
         recview=(RecyclerView) findViewById(R.id.recview);
         recview.setLayoutManager(new LinearLayoutManager( this));
 
+emptyView = (LinearLayout) findViewById(R.id.empty);
+
+
 
 
 
@@ -52,12 +58,18 @@ public class petlist extends AppCompatActivity {
             public void onResponse(String response) {
 
 
-                GsonBuilder builder =new GsonBuilder();
-                Gson gson=builder.create();
+                      GsonBuilder builder = new GsonBuilder();
+                      builder.serializeNulls();
+                      Gson gson = builder.create();
+                      petlist_model data[] = gson.fromJson(response, petlist_model[].class);
 
-                petlist_model data[] =gson.fromJson(response,petlist_model[].class);
-                petlist_adapter adapter=new petlist_adapter(data);
-                recview.setAdapter(adapter);
+                      petlist_adapter adapter = new petlist_adapter(data);
+                      recview.setAdapter(adapter);
+                if(data.length<1) {
+                    recview.setVisibility(View.GONE);
+                    emptyView.setVisibility(View.VISIBLE);
+                }
+
             }
         }, new Response.ErrorListener() {
             @Override

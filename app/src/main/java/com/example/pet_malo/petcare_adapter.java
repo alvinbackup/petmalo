@@ -37,7 +37,7 @@ public class petcare_adapter extends RecyclerView.Adapter<petcare_adapter.petcar
     }
 
     @Override
-    public void onBindViewHolder(@NonNull  petcareviewholder holder, int position) {
+    public void onBindViewHolder(@NonNull  petcareviewholder holder,int position) {
         holder.name.setText(data[position].getTitle());
         holder.desc.setText(data[position].getDescription());
         Glide.with(holder.name.getContext()).load("https://petmalo.000webhostapp.com/examples/upload/"+data[position].getImages()).into(holder.img);

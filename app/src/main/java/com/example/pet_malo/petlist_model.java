@@ -1,9 +1,11 @@
 package com.example.pet_malo;
 
 public class petlist_model {
+
     String cust_email, name, birthday, gender, breed, species, date, againts, manufacturer, veterinarian;
 
     public petlist_model() {
+
     }
 
     public petlist_model(String cust_email, String name, String birthday, String gender, String breed, String species, String date, String againts, String manufacturer, String veterinarian) {
