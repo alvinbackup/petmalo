@@ -15,6 +15,7 @@ import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.SearchView;
 import android.widget.Toast;
 
@@ -41,6 +42,7 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -83,7 +85,8 @@ HashMap<String, String> mMarker=new HashMap<String, String>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//
+
+//Bottom Nav java End
         binding = ActivityMapstoreBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         gson = new GsonBuilder().create();
@@ -104,6 +107,35 @@ HashMap<String, String> mMarker=new HashMap<String, String>();
         }
 
         markerOptions = new Vector<>();
+
+
+
+        //Bottom nav start
+        BottomNavigationView bottomNavigationView = findViewById(R.id.home_nav);
+        //Set Home Nav As Selected
+        bottomNavigationView.setSelectedItemId(R.id.nav_findstore);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.nav_cart:
+                        startActivity(new Intent(getApplicationContext(), My_cart.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.nav_home:
+                        startActivity(new Intent(getApplicationContext(), profile.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.nav_findstore:
+                        startActivity(new Intent(getApplicationContext(), mapstore.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                }
+                return false;
+
+            }
+        });
 
     }
 

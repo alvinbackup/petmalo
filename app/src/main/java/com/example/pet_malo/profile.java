@@ -13,8 +13,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.Switch;
 import android.widget.TextView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class profile extends AppCompatActivity {
@@ -30,7 +32,31 @@ public class profile extends AppCompatActivity {
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.orange)));
         setContentView(R.layout.activity_profile);
 
+        BottomNavigationView bottomNavigationView = findViewById(R.id.home_nav);
+        //Set Home Nav As Selected
+        bottomNavigationView.setSelectedItemId(R.id.nav_home);
 
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.nav_cart:
+                        startActivity(new Intent(getApplicationContext(), My_cart.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.nav_home:
+                        startActivity(new Intent(getApplicationContext(), profile.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.nav_findstore:
+                        startActivity(new Intent(getApplicationContext(), mapstore.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                }
+                return false;
+
+            }
+        });
 
         email_iden=(TextView)findViewById(R.id.identifier);
         String email=getIntent().getStringExtra("email_iden");
@@ -79,10 +105,10 @@ public class profile extends AppCompatActivity {
                 startActivity(new Intent(this, com.example.pet_malo.user_info.class));
                 break;
             case R.id.signout:
-                Intent intent = new Intent(profile.this,MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(intent);
-                break;
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(profile.this, MainActivity.class));
+                finish();
+
 
         }return true;
     }

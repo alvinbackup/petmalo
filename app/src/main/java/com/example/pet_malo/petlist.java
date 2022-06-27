@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,6 +22,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -36,18 +38,40 @@ public class petlist extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_petlist);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.orange)));
-        getSupportActionBar().setTitle("Pet Card");
+        getSupportActionBar().setTitle(Html.fromHtml("<font color='#0F2350'>Pet Card</font>"));
 
+        //Bottom nav start
+        BottomNavigationView bottomNavigationView = findViewById(R.id.home_nav);
+        //Set Home Nav As Selected
+        bottomNavigationView.setItemIconTintList(null);
+
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.nav_cart:
+                        startActivity(new Intent(getApplicationContext(), My_cart.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.nav_home:
+                        startActivity(new Intent(getApplicationContext(), profile.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                    case R.id.nav_findstore:
+                        startActivity(new Intent(getApplicationContext(), mapstore.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                }
+                return false;
+
+            }
+        });
         //
         recview=(RecyclerView) findViewById(R.id.recview);
         recview.setLayoutManager(new LinearLayoutManager( this));
 
-emptyView = (LinearLayout) findViewById(R.id.empty);
-
-
-
-
-
+        emptyView = (LinearLayout) findViewById(R.id.empty);
 
         processdata();
     }

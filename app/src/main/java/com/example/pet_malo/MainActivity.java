@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.text.util.Linkify;
 import android.util.Patterns;
@@ -18,6 +19,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -39,12 +41,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().setTitle("Log In");
+        getSupportActionBar().setTitle(Html.fromHtml("<font color='#0F2350'>Log In</font>"));
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.orange)));
 
         register = (Button) findViewById(R.id.register);
         register.setOnClickListener(this);
         mAuth = FirebaseAuth.getInstance();
+        if (mAuth.getCurrentUser() != null) {
+            startActivity(new Intent(MainActivity.this, profile.class));
+            finish();
+        }
 
         storelink=(TextView) findViewById(R.id.store_link);
         storelink.setMovementMethod(LinkMovementMethod.getInstance());
@@ -107,11 +113,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (task.isSuccessful()){
 
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
                     if (user.isEmailVerified()) {
                         Intent intent = new Intent(MainActivity.this,profile.class);
                         intent.putExtra("email_iden",editTextEmail.getText().toString());
 
                         startActivity(intent);
+                        finish();
                     }else{
                         user.sendEmailVerification();
                         Toast.makeText(MainActivity.this,"Check your Email To Verify Your Account",Toast.LENGTH_LONG).show();
@@ -119,6 +127,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }else{
                     Toast.makeText(MainActivity.this, "Failed to login! Plese check your crendentials", Toast.LENGTH_LONG).show();
                 }
+
             }
         });
     }

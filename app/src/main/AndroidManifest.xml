@@ -18,18 +18,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PETMalo"
         android:usesCleartextTraffic="true">
-        <activity android:name=".reserved_list"></activity>
+        <activity
+            android:name=".My_cart"
+            android:exported="false" />
+        <activity android:name=".reserved_list" />
         <activity android:name=".product_details" />
         <activity android:name=".product_row" />
         <activity android:name=".product" />
-        <activity android:name=".review_reserveprod"/>
+        <activity android:name=".review_reserveprod" />
         <activity android:name=".prod_category" />
         <activity android:name=".petcare_detailed" />
-        <activity android:name=".petcare"/>
+        <activity android:name=".petcare" />
         <activity android:name=".storepage" />
         <activity android:name=".mapstore" />
         <activity android:name=".petlist" />
-        <activity android:name=".petcard"/>
+        <activity android:name=".petcard" />
         <activity android:name=".flashscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
