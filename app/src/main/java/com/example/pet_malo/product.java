@@ -5,7 +5,10 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
@@ -17,22 +20,40 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 public class product extends AppCompatActivity {
-     private static  final String url ="https://petmalo.000webhostapp.com/android_map_markers/products_mob_con.php";
+
 
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
+    TextView storeid, categ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product);
+
+        categ =(TextView)findViewById(R.id.categ);
+
         recyclerView=(RecyclerView)findViewById(R.id.prod_recview);
         layoutManager=new GridLayoutManager(this,2);
         recyclerView.setLayoutManager(layoutManager);
-        processdata();
+
+        storeid=(TextView)findViewById(R.id.store_id);
+
+        processdata(getIntent().getStringExtra("store_id"),getIntent().getStringExtra("category"));
+
+
+
     }
-    public void processdata()
+    public void processdata(String store_id, String category)
     {
+        Uri.Builder builder = new Uri.Builder();
+        builder.scheme("https")
+                .authority("petmalo.000webhostapp.com")
+                .appendPath("android_map_markers")
+                .appendPath("products_mob_con.php")
+                .appendQueryParameter("prod_id",store_id)
+                .appendQueryParameter("product_categ",category);
+        String url = builder.build().toString();
         StringRequest request = new StringRequest(url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {

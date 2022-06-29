@@ -11,7 +11,7 @@ public class Storesmarker {
     public String id;
     @SerializedName("name")
     @Expose
-    public String name;
+    public String Store_name;
     @SerializedName("description")
     @Expose
     public String description;
