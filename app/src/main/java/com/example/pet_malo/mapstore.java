@@ -225,7 +225,7 @@ if (storesmarkers.length<1){
             for (Storesmarker info: storesmarkers){
                 Double lat = Double.parseDouble(info.lat);
                 Double lng = Double.parseDouble(info.lng);
-                String title = info.name;
+                String title = info.Store_name;
                 String snippet= info.id;
 
               MarkerOptions marker =  new MarkerOptions().position(new LatLng(lat, lng))

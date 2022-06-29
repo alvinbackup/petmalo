@@ -6,16 +6,11 @@
         android:icon="@drawable/more"
         android:title="">
 
-        <menu>
+        <menu>  
             <item
                 android:id="@+id/profile"
                 android:title="Profile"
                 android:icon="@drawable/profile"
-                app:showAsAction="never"/>
-            <item
-                android:id="@+id/about_us"
-                android:title="About Us"
-                android:icon="@drawable/aboutus"
                 app:showAsAction="never"/>
             <item
                 android:id="@+id/signout"
