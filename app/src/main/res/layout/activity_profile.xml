@@ -64,8 +64,7 @@
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textStyle="bold"
-                    android:visibility="gone"
-                    />
+                    android:visibility="gone" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
@@ -180,7 +179,7 @@
             app:cardElevation="8dp">
 
             <LinearLayout
-                android:id="@+id/maps"
+                android:id="@+id/profile"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_vertical|center_horizontal"
@@ -191,14 +190,14 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="87dp"
-                    android:src="@drawable/stores2" />
+                    android:src="@drawable/profile_icon" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:gravity="center_horizontal"
-                    android:text="Find Store"
+                    android:text="My Profile"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textStyle="bold" />
@@ -214,29 +213,27 @@
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
             android:layout_margin="8dp"
+            app:cardBackgroundColor="@android:color/transparent"
             app:cardCornerRadius="15dp"
-            app:cardElevation="8dp">
+            app:cardElevation="0dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_vertical|center_horizontal"
-                android:background="#0F2350"
                 android:gravity="center"
                 android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="87dp"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/about" />
+                    android:scaleType="fitXY" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:gravity="center_horizontal"
-                    android:text="My Profile"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textStyle="bold" />

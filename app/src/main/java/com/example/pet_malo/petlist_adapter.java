@@ -1,5 +1,6 @@
 package com.example.pet_malo;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +36,14 @@ public class petlist_adapter extends RecyclerView.Adapter<petlist_adapter.myview
         holder.petlist_againts.setText(data[position].getAgaints());
         holder.petlist_manufacturer.setText(data[position].getManufacturer());
         holder.petlist_veterinarian.setText(data[position].getVeterinarian());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(),pet_info.class);
+                intent.putExtra("pet_name",data[position].getName());
+                view.getContext().startActivity(intent);
+            }
+        });
 
 
     }

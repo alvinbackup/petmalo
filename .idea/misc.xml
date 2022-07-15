@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/drawable/category_shape.xml" value="0.1255" />
+        <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/drawable/ic_baseline_exit_to_app_24.xml" value="0.1405" />
         <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/drawable/itemcolor.xml" value="0.11" />
         <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/drawable/more.xml" value="0.11" />
         <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/drawable/navtextcolor.xml" value="0.11" />
@@ -10,15 +12,17 @@
         <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/drawable/petlist_shape.xml" value="0.25" />
         <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/drawable/product_shape.xml" value="0.17" />
         <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/drawable/profile.xml" value="0.11" />
+        <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/drawable/reserved_shape.xml" value="0.116" />
         <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/drawable/store_icon.xml" value="0.11" />
         <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/layout/activity_main.xml" value="0.14764492753623187" />
         <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/layout/activity_mapstore.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/layout/activity_my_cart.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/layout/activity_pet_info.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/layout/activity_petcard.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/layout/activity_petcare.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/layout/activity_petcare_detailed.xml" value="0.2" />
         <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/layout/activity_petlist.xml" value="0.2" />
-        <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/layout/activity_prod_category.xml" value="0.25" />
+        <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/layout/activity_prod_category.xml" value="0.2" />
         <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/layout/activity_product.xml" value="0.14764492753623187" />
         <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/layout/activity_product_details.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/layout/activity_product_row.xml" value="0.22" />
@@ -26,13 +30,18 @@
         <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/layout/activity_register.xml" value="0.2" />
         <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/layout/activity_reserved_list.xml" value="0.25" />
         <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/layout/activity_review_reserveprod.xml" value="0.5" />
-        <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/layout/activity_storespage.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/layout/activity_store_product.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/layout/activity_storespage.xml" value="0.22" />
+        <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/layout/activity_user_info.xml" value="0.19610507246376813" />
         <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/layout/petcare_row.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/layout/petlist_row.xml" value="0.3151595744680851" />
+        <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/layout/petlist_row.xml" value="0.3705179282868526" />
         <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/layout/reservedlist_row.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/layout/toast_product.xml" value="0.19610507246376813" />
         <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/menu/bottom_nav.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/menu/menu_item.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/menu/petcard_list.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/menu/search.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/padil/AndroidStudioProjects/petmalo/app/src/main/res/menu/search_menu.xml" value="0.67" />
       </map>
     </option>
   </component>

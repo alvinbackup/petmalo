@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.Html;
 import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
@@ -24,6 +26,9 @@ public class reserved_list extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reserved_list);
+        getSupportActionBar().setTitle(Html.fromHtml("<font color='#0F2350'>Reserved Products</font>"));
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.pastel)));
+
         listview=(RecyclerView)findViewById(R.id.listview);
         listview.setLayoutManager(new LinearLayoutManager(this));
 

@@ -30,7 +30,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class profile extends AppCompatActivity {
 
-    private LinearLayout appointment_btn,map_btn,petcard,reserved;
+    private LinearLayout appointment_btn,profile_btn,petcard,reserved;
     TextView email_iden,count;
     private FirebaseUser user;
     private DatabaseReference reference;
@@ -41,7 +41,7 @@ public class profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
          getSupportActionBar().setTitle(Html.fromHtml("<font color='#0F2350'>PET-Malo</font>"));
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.orange)));
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.pastel)));
         setContentView(R.layout.activity_profile);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.home_nav);
@@ -100,11 +100,11 @@ public class profile extends AppCompatActivity {
                 openappointment();
             }
         });
-        map_btn = (LinearLayout) findViewById(R.id.maps);
-        map_btn.setOnClickListener(new View.OnClickListener() {
+        profile_btn = (LinearLayout) findViewById(R.id.profile);
+        profile_btn.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-            openmap();
+            openprofile();
         }
     });
         petcard = (LinearLayout) findViewById(R.id.card);
@@ -147,8 +147,8 @@ public class profile extends AppCompatActivity {
         Intent intent = new Intent(this,Appointment.class);
         startActivity(intent);
     }
-    public void openmap(){
-        Intent intent = new Intent(this,mapstore.class);
+    public void openprofile(){
+        Intent intent = new Intent(this,user_info.class);
         startActivity(intent);
     }
     public void openpetcard(){

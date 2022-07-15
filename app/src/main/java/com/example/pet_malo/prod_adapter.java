@@ -1,9 +1,11 @@
 package com.example.pet_malo;
 
+import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -14,12 +16,17 @@ import com.bumptech.glide.Glide;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.List;
+
 public class prod_adapter extends RecyclerView.Adapter<prod_adapter.prodviewholder>
 {
     prod_model data[];
 
+
+
     public prod_adapter(prod_model[] data) {
         this.data = data;
+
     }
 
     @NonNull
@@ -64,6 +71,7 @@ public class prod_adapter extends RecyclerView.Adapter<prod_adapter.prodviewhold
     public int getItemCount() {
         return data.length;
     }
+
 
     class prodviewholder extends RecyclerView.ViewHolder
     {
