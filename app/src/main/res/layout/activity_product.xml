@@ -5,19 +5,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".product"
-    android:background="@color/white">
+    android:background="@color/notthatwhite">
+    <ImageView
+        android:id="@+id/noproduct"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/noproduct"
+        android:visibility="gone"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/store_id"
         android:text="Store_id"
+        android:visibility="gone"
         tools:ignore="MissingConstraints" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/categ"
         android:text=""
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:visibility="gone"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"

@@ -2,20 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:id="@+id/signout"
         app:showAsAction="always"
-        android:icon="@drawable/more"
-        android:title="">
+        android:icon="@drawable/logout"
+        android:title=""/>
 
-        <menu>  
-            <item
-                android:id="@+id/profile"
-                android:title="Profile"
-                android:icon="@drawable/profile"
-                app:showAsAction="never"/>
-            <item
-                android:id="@+id/signout"
-                android:title="Log Out"
-                app:showAsAction="never"/>
-        </menu>
-    </item>
+
 </menu>

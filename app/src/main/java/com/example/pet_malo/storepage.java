@@ -3,7 +3,9 @@ package com.example.pet_malo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -15,7 +17,8 @@ public class storepage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_storespage);
-        getSupportActionBar().setTitle("Store");
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.orange)));
+        getSupportActionBar().setTitle(Html.fromHtml("<font color='#0F2350'>Store Home</font>"));
 
         Storeids=findViewById(R.id.storeid);
         String ids=getIntent().getStringExtra("id");

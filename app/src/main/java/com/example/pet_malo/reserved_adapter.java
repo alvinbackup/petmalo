@@ -16,6 +16,7 @@ import org.jetbrains.annotations.NotNull;
 public class reserved_adapter extends RecyclerView.Adapter<reserved_adapter.reserve_holder>
 {
     reservedlist_model data[];
+    reservedlist_model dataall;
 
     public reserved_adapter(reservedlist_model[] data) {
         this.data = data;

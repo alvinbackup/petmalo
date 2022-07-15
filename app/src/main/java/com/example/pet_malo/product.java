@@ -1,13 +1,20 @@
 package com.example.pet_malo;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.Html;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,18 +32,21 @@ public class product extends AppCompatActivity {
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
     TextView storeid, categ;
+    ImageView noproduct;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product);
+        getSupportActionBar().setTitle(Html.fromHtml("<font color='#0F2350'>Products</font>"));
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.pastel)));
 
         categ =(TextView)findViewById(R.id.categ);
 
         recyclerView=(RecyclerView)findViewById(R.id.prod_recview);
         layoutManager=new GridLayoutManager(this,2);
         recyclerView.setLayoutManager(layoutManager);
-
+        noproduct=(ImageView)findViewById(R.id.noproduct);
         storeid=(TextView)findViewById(R.id.store_id);
 
         processdata(getIntent().getStringExtra("store_id"),getIntent().getStringExtra("category"));
@@ -62,8 +72,12 @@ public class product extends AppCompatActivity {
 
                 prod_model data[]=gson.fromJson(response,prod_model[].class);
                 prod_adapter prod_adapter=new prod_adapter(data);
-
                 recyclerView.setAdapter(prod_adapter);
+
+                if(data.length<1) {
+                    recyclerView.setVisibility(View.GONE);
+                    noproduct.setVisibility(View.VISIBLE);
+                }
 
 
 
@@ -79,5 +93,26 @@ public class product extends AppCompatActivity {
         );
         RequestQueue queue= Volley.newRequestQueue(getApplicationContext());
         queue.add(request);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.search, menu);
+        MenuItem item = menu.findItem(R.id.action_search);
+        SearchView searchView =(SearchView) item.getActionView();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+
+                return false;
+            }
+        });
+        return super.onCreateOptionsMenu(menu);
+
     }
 }

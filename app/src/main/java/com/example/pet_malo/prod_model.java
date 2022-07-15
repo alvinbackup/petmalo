@@ -3,8 +3,7 @@ package com.example.pet_malo;
 public class prod_model {
     String p_id, prod_id,product_categ,product_name,price,description,stock,image;
 
-    public prod_model() {
-    }
+
 
     public prod_model(String p_id, String prod_id, String product_categ, String product_name, String price, String description, String stock, String image) {
         this.p_id = p_id;
