@@ -11,9 +11,9 @@ public class User {
     public User(String fullName,String lastname, String address, String contact, String email){
         this.fullName = fullName;
         this.lastname = lastname;
-                this.address = address;
-                this.contact =contact;
-                this.email = email;
+        this.address = address;
+        this.contact =contact;
+        this.email = email;
 
     }
 }

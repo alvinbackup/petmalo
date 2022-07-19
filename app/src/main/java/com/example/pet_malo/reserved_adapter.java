@@ -1,5 +1,6 @@
 package com.example.pet_malo;
 
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,7 +39,16 @@ public class reserved_adapter extends RecyclerView.Adapter<reserved_adapter.rese
         holder.res_quan.setText(data[position].getRev_quan());
         holder.res_categ.setText(data[position].getRev_categ());
         holder.res_total.setText(data[position].getProd_total());
+        holder.res_stat.setText(data[position].getStatus());
         Glide.with(holder.res_name.getContext()).load("https://petmalo.000webhostapp.com/examples/upload/"+data[position].getProd_image()).into(holder.img);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(), order_details.class);
+
+                view.getContext().startActivity(intent);
+            }
+        });
 
     }
 
@@ -50,7 +60,7 @@ public class reserved_adapter extends RecyclerView.Adapter<reserved_adapter.rese
     class reserve_holder extends RecyclerView.ViewHolder
     {
         ImageView img;
-        TextView res_name, res_desc,res_quan,res_total,res_categ;
+        TextView res_name, res_desc,res_quan,res_total,res_categ, res_stat;
         public reserve_holder(@NonNull @NotNull View itemView) {
             super(itemView);
 
@@ -60,6 +70,8 @@ public class reserved_adapter extends RecyclerView.Adapter<reserved_adapter.rese
             res_desc=itemView.findViewById(R.id.resprod_desc);
             res_categ=itemView.findViewById(R.id.resprod_categ);
             res_total=itemView.findViewById(R.id.resprod_total);
+            res_stat=itemView.findViewById(R.id.resprod_status);
+
         }
     }
 }

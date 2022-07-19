@@ -3,12 +3,12 @@ package com.example.pet_malo;
 public class reservedlist_model {
 
 
-    String prod_name,rev_desc,rev_quan,rev_categ,cust_name,cust_add,cust_contact,cust_email,store_id,prod_total,prod_image,prodcount;
+    String prod_name,rev_desc,rev_quan,rev_categ,cust_name,cust_add,cust_contact,cust_email,store_id,prod_total,prod_image,prodcount,status;
 
     public reservedlist_model() {
     }
 
-    public reservedlist_model(String prod_name, String rev_desc, String rev_quan, String rev_categ, String cust_name, String cust_add, String cust_contact, String cust_email, String store_id, String prod_total, String prod_image, String prodcount) {
+    public reservedlist_model(String prod_name, String rev_desc, String rev_quan, String rev_categ, String cust_name, String cust_add, String cust_contact, String cust_email, String store_id, String prod_total, String prod_image, String prodcount,String status) {
         this.prod_name = prod_name;
         this.rev_desc = rev_desc;
         this.rev_quan = rev_quan;
@@ -21,6 +21,7 @@ public class reservedlist_model {
         this.prod_total = prod_total;
         this.prod_image = prod_image;
         this.prodcount = prodcount;
+        this.status=status;
     }
 
     public String getProd_name() {
@@ -116,5 +117,11 @@ public class reservedlist_model {
     }
     public void setProd_count(String prodcount) {
         this.prodcount = prodcount;
+    }
+    public String getStatus() {
+        return status;
+    }
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

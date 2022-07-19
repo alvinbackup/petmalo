@@ -19,6 +19,9 @@
         android:theme="@style/Theme.PETMalo"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".order_details"
+            android:exported="false" />
+        <activity
             android:name=".pet_info"
             android:exported="false" />
         <activity
