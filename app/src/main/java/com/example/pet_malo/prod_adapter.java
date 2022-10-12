@@ -46,7 +46,7 @@ public class prod_adapter extends RecyclerView.Adapter<prod_adapter.prodviewhold
         holder.prod_id.setText(data[position].getProd_id());
         holder.prod_categ.setText(data[position].getProduct_categ());
 
-        Glide.with(holder.prod_name.getContext()).load("https://petmalo.000webhostapp.com/examples/upload/"+data[position].getImage()).into(holder.prod_image);
+        Glide.with(holder.prod_name.getContext()).load("https://christoherhonrado.000webhostapp.com/examples/upload/"+data[position].getImage()).into(holder.prod_image);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

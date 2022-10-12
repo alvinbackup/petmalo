@@ -40,11 +40,22 @@ public class reserved_adapter extends RecyclerView.Adapter<reserved_adapter.rese
         holder.res_categ.setText(data[position].getRev_categ());
         holder.res_total.setText(data[position].getProd_total());
         holder.res_stat.setText(data[position].getStatus());
+        holder.cust_name.setText(data[position].getCust_name());
+        holder.cust_contact.setText(data[position].getCust_contact());
+        holder.cust_add.setText(data[position].getCust_add());
         Glide.with(holder.res_name.getContext()).load("https://petmalo.000webhostapp.com/examples/upload/"+data[position].getProd_image()).into(holder.img);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), order_details.class);
+                intent.putExtra("order_status",data[position].getStatus());
+                intent.putExtra("prod_name",data[position].getProd_name());
+                intent.putExtra("order_quantity",data[position].getRev_quan());
+                intent.putExtra("order_custname",data[position].getCust_name());
+                intent.putExtra("order_custcon",data[position].getCust_contact());
+                intent.putExtra("order_custadd",data[position].getCust_add());
+
+                intent.putExtra("img","https://petmalo.000webhostapp.com/examples/upload/"+data[position].getProd_image());
 
                 view.getContext().startActivity(intent);
             }
@@ -60,17 +71,22 @@ public class reserved_adapter extends RecyclerView.Adapter<reserved_adapter.rese
     class reserve_holder extends RecyclerView.ViewHolder
     {
         ImageView img;
-        TextView res_name, res_desc,res_quan,res_total,res_categ, res_stat;
+        TextView res_name, res_desc,res_quan,res_total,res_categ, res_stat,cust_name,cust_contact,cust_add;
         public reserve_holder(@NonNull @NotNull View itemView) {
             super(itemView);
 
             img=itemView.findViewById(R.id.res_img);
+            cust_name=itemView.findViewById(R.id.name);
+            cust_contact=itemView.findViewById(R.id.contact);
+            cust_add=itemView.findViewById(R.id.address);
+
             res_name=itemView.findViewById(R.id.resprod_name);
             res_quan=itemView.findViewById(R.id.resprod_qaun);
             res_desc=itemView.findViewById(R.id.resprod_desc);
             res_categ=itemView.findViewById(R.id.resprod_categ);
             res_total=itemView.findViewById(R.id.resprod_total);
             res_stat=itemView.findViewById(R.id.resprod_status);
+
 
         }
     }

@@ -10,6 +10,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,7 +33,10 @@ import com.google.firebase.database.ValueEventListener;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 import pl.droidsonroids.gif.GifImageView;
@@ -42,12 +46,13 @@ public class review_reserveprod extends AppCompatActivity {
     //Variables
 private TextView rev_price,rev_name,rev_desc,rev_categ,rev_quan,rev_storeid,result,image_text;
 private TextView FullnameTextView, AddressTextView,ContactTextView,emailTextView;
-//URL
-private static  final String url ="https://petmalo.000webhostapp.com/android_map_markers/reserved_product_con.php";
+   private EditText autoD8;
+    //URL
+private static  final String url ="https://christoherhonrado.000webhostapp.com/android_map_markers/reserved_product_con.php";
 private ImageView re_img;
 // POST string
 String str_name,str_total,str_desc,str_categ,str_quan,str_storeid,str_custname,str_custadd,str_custcontact,str_custemail,
-           str_image;
+           date_reserved,str_image;
 
     private FirebaseUser user;
     private DatabaseReference reference;
@@ -56,6 +61,12 @@ String str_name,str_total,str_desc,str_categ,str_quan,str_storeid,str_custname,s
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_review_reserveprod);
+        autoD8=findViewById(R.id.autoD8);
+
+        SimpleDateFormat dateF = new SimpleDateFormat("EEE, d MMM yyyy", Locale.getDefault());
+        String date = dateF.format(Calendar.getInstance().getTime());
+
+        autoD8.setText(date);
 
 
         re_img=findViewById(R.id.rev_img);
@@ -98,7 +109,7 @@ result.setText(Double.toString(sum));
 
 
         String revimg=getIntent().getStringExtra("rev_img");
-        Glide.with(review_reserveprod.this).load("https://petmalo.000webhostapp.com/examples/upload/"+revimg).into(re_img);
+        Glide.with(review_reserveprod.this).load("https://christoherhonrado.000webhostapp.com/examples/upload/"+revimg).into(re_img);
 
 
         user = FirebaseAuth.getInstance().getCurrentUser();
@@ -157,6 +168,7 @@ result.setText(Double.toString(sum));
 
         str_storeid = rev_storeid.getText().toString();
         str_total = result.getText().toString();
+        date_reserved = autoD8.getText().toString();
         str_image = image_text.getText().toString();
 
 
@@ -201,6 +213,7 @@ result.setText(Double.toString(sum));
 
             params.put("store_id", str_storeid);
             params.put("prod_total", str_total);
+            params.put("date_reserved", date_reserved);
             params.put("prod_image", str_image);
 
             return params;

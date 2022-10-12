@@ -46,7 +46,7 @@ TextView storeids;
     {
         Uri.Builder builder = new Uri.Builder();
         builder.scheme("https")
-                .authority("petmalo.000webhostapp.com")
+                .authority("christoherhonrado.000webhostapp.com")
                 .appendPath("android_map_markers")
                 .appendPath("petcare_jsonselect.php")
                 .appendQueryParameter("care_id", stid);

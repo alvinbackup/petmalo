@@ -39,9 +39,10 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
                     android:text="Pet Name:"
-                    android:textColor="@color/white"
+                    android:textColor="@color/darkblue"
                     android:textSize="20dp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    />
 
                 <EditText
                     android:id="@+id/petname"
@@ -50,6 +51,9 @@
                     android:paddingStart="10dp"
                     android:drawableStart="@drawable/petname_icon"
                     android:textColorHint="#837171"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:textSize="14sp"
                     android:textColor="@color/black"
                     android:background="@drawable/custom_input"
                      />
@@ -60,7 +64,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="25dp"
                     android:text="Birthday:"
-                    android:textColor="@color/white"
+                    android:textColor="@color/darkblue"
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
@@ -72,6 +76,9 @@
                     android:layout_gravity="right"
                     android:textColorHint="#837171"
                     android:drawableStart="@drawable/birthday_icon"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:textSize="14sp"
                     android:textColor="@color/black"
                     android:background="@drawable/custom_input"
                     android:clickable="false"
@@ -85,7 +92,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="25dp"
                     android:text="Gender:"
-                    android:textColor="@color/white"
+                    android:textColor="@color/darkblue"
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
@@ -96,6 +103,9 @@
                     android:layout_gravity="right"
                     android:drawableStart="@drawable/gender_icon"
                     android:textColorHint="#837171"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:textSize="14sp"
                     android:textColor="@color/black"
                     android:paddingStart="10dp"
                     android:background="@drawable/custom_input"
@@ -106,20 +116,23 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="25dp"
                     android:text="Breed:"
-                    android:textColor="@color/white"
+                    android:textColor="@color/darkblue"
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
                 <EditText
                     android:id="@+id/breed"
-                    android:paddingStart="10dp"
+                    android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_gravity="right"
-                    android:textColorHint="#837171"
-                    android:textColor="@color/black"
-                    android:drawableStart="@drawable/petname_icon"
                     android:background="@drawable/custom_input"
-                    android:layout_width="match_parent"/>
+                    android:drawableStart="@drawable/petname_icon"
+                    android:paddingStart="10dp"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#837171" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -127,7 +140,7 @@
                     android:layout_marginTop="25dp"
 
                     android:text="Species"
-                    android:textColor="@color/white"
+                    android:textColor="@color/darkblue"
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
@@ -139,8 +152,12 @@
                     android:layout_gravity="right"
                     android:layout_marginBottom="25dp"
                     android:textColorHint="#837171"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:textSize="14sp"
                     android:textColor="@color/black"
                     android:background="@drawable/custom_input"
+                    android:drawableStart="@drawable/species"
                     android:paddingStart="10dp"
                     />
                 <LinearLayout
@@ -153,8 +170,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Vaccination"
-                        android:textColor="@color/black"
+                        android:text="Vaccination Info"
+                        android:textColor="@color/darkblue"
                         android:textSize="15dp"
                         android:textStyle="bold"/>
                 </LinearLayout>
@@ -164,7 +181,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="25dp"
                     android:text="Date:"
-                    android:textColor="@color/white"
+                    android:textColor="@color/darkblue"
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
@@ -175,6 +192,9 @@
                     android:layout_height="45dp"
                     android:layout_gravity="right"
                     android:textColorHint="#837171"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:textSize="14sp"
                     android:textColor="@color/black"
                     android:drawableStart="@drawable/date_icon"
                     android:background="@drawable/custom_input"
@@ -189,7 +209,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="25dp"
                     android:text="Againts:"
-                    android:textColor="@color/white"
+                    android:textColor="@color/darkblue"
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
@@ -199,6 +219,9 @@
                     android:layout_height="45dp"
                     android:layout_gravity="right"
                     android:textColorHint="#837171"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:textSize="14sp"
                     android:textColor="@color/black"
                     android:background="@drawable/custom_input"
                     android:drawableStart="@drawable/againts_icon"
@@ -210,7 +233,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="25dp"
                     android:text="Manufacturer:"
-                    android:textColor="@color/white"
+                    android:textColor="@color/darkblue"
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
@@ -219,10 +242,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_gravity="right"
-                    android:textColorHint="#837171"
-                    android:textColor="@color/black"
                     android:background="@drawable/custom_input"
-                     />
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:textColor="@color/black"
+                    android:textColorHint="#837171"
+                    android:textSize="14sp"
+                    android:paddingStart="10dp"
+                    android:drawableStart="@drawable/manufacturer"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -230,7 +257,7 @@
                     android:layout_marginTop="25dp"
 
                     android:text="Veterinarian:"
-                    android:textColor="@color/white"
+                    android:textColor="@color/darkblue"
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
@@ -241,11 +268,14 @@
                     android:layout_height="45dp"
                     android:layout_gravity="right"
                     android:layout_marginBottom="25dp"
-                    android:textColorHint="#837171"
-                    android:textColor="@color/black"
-                    android:paddingStart="10dp"
                     android:background="@drawable/custom_input"
-                     />
+                    android:paddingStart="10dp"
+                    android:drawablePadding="10dp"
+                    android:ems="10"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"
+                    android:drawableStart="@drawable/vet"
+                    android:textColorHint="#837171" />
 
                 <Button
                     android:id="@+id/submit"

@@ -59,7 +59,7 @@ public class product_details extends AppCompatActivity {
         prod_categ.setText(categ);
 
         String image=getIntent().getStringExtra("img");
-        Glide.with(product_details.this).load("https://petmalo.000webhostapp.com/examples/upload/"+image).into(img);
+        Glide.with(product_details.this).load("https://christoherhonrado.000webhostapp.com/examples/upload/"+image).into(img);
 
         String timage=getIntent().getStringExtra("img");
         image_text.setText(timage);

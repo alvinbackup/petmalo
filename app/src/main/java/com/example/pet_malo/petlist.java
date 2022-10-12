@@ -27,7 +27,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 public class petlist extends AppCompatActivity {
-    private static final String url="https://petmalo.000webhostapp.com/android_map_markers/petcard_list.php";
+    private static final String url="https://christoherhonrado.000webhostapp.com/android_map_markers/petcard_list.php";
     RecyclerView recview;
     private LinearLayout emptyView;
 

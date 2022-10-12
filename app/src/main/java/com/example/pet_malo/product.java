@@ -58,7 +58,7 @@ public class product extends AppCompatActivity {
     {
         Uri.Builder builder = new Uri.Builder();
         builder.scheme("https")
-                .authority("petmalo.000webhostapp.com")
+                .authority("christoherhonrado.000webhostapp.com")
                 .appendPath("android_map_markers")
                 .appendPath("products_mob_con.php")
                 .appendQueryParameter("prod_id",store_id)

@@ -40,7 +40,7 @@ public class reserved_list extends AppCompatActivity {
 
         Uri.Builder builder = new Uri.Builder();
         builder.scheme("https")
-                .authority("petmalo.000webhostapp.com")
+                .authority("christoherhonrado.000webhostapp.com")
                 .appendPath("android_map_markers")
                 .appendPath("reserverlist.php")
                 .appendQueryParameter("cust_email",useremail);

@@ -38,7 +38,7 @@ public class petcard extends AppCompatActivity {
     Calendar calendar;
     String str_name, str_birthday, str_gender, str_breed, str_species, str_date, str_manufacturer, str_againts, str_veterinarian;
 
-    private static final String url = "https://petmalo.000webhostapp.com/petcard.php";
+    private static final String url = "https://christoherhonrado.000webhostapp.com/petcard.php";
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,7 +71,7 @@ public class petcard extends AppCompatActivity {
             }
 
             private void updateCalendar() {
-                String Format = "MM/dd/yy";
+                String Format = "EEE, d MMM yyyy";
                 SimpleDateFormat sdf = new SimpleDateFormat(Format, Locale.US);
                 pet_birthday.setText(sdf.format(calendar.getTime()));
             }
@@ -97,7 +97,7 @@ public class petcard extends AppCompatActivity {
         }
 
         private void updatedate() {
-            String Format = "MM/dd/yy";
+            String Format = "EEE, d MMM yyyy";
             SimpleDateFormat sdf = new SimpleDateFormat(Format, Locale.US);
             pet_date.setText(sdf.format(datecalendar.getTime()));
         }

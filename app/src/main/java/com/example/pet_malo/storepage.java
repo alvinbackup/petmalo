@@ -63,6 +63,7 @@ public class storepage extends AppCompatActivity {
     }
     public void openappointment(){
         Intent intent = new Intent(this,Appointment.class);
+        intent.putExtra("storeid",Storeids.getText().toString());
         startActivity(intent);
     }
 }
