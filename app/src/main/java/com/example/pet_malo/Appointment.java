@@ -43,14 +43,16 @@ public class Appointment extends AppCompatActivity {
     AutoCompleteTextView auto_service;
     ArrayAdapter<String> adapterItem;
 
-    EditText app_name,app_lname,app_address,landmark,app_contact,stored_id,app_email,date,time;
-    String str_name,str_lname,str_adress,str_landmark,str_contact,str_service,str_id,str_email,str_date,str_time;
-    private static final String url = "https://christoherhonrado.000webhostapp.com/android_map_markers/service.php";
+    EditText app_name,app_lname,app_address,landmark,app_contact,stored_id,app_email,date,time,store;
+    String str_name,str_lname,str_adress,str_landmark,str_contact,str_service,str_id,str_email,str_date,str_time,str_store;
+    private static final String url = "https://pet-shop-management.000webhostapp.com/android_map_markers/service.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_appointment);
+
+
 
         user = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("Users");
@@ -67,6 +69,7 @@ public class Appointment extends AppCompatActivity {
             }
         });
 
+        store=findViewById(R.id.store);
         app_name = findViewById(R.id.name);
         app_lname = findViewById(R.id.lname);
         app_email = findViewById(R.id.cust_email);
@@ -76,7 +79,11 @@ public class Appointment extends AppCompatActivity {
         date=findViewById(R.id.app_date);
         time=findViewById(R.id.app_time);
 
-         stored_id=(EditText)findViewById(R.id.store_id);
+        store=findViewById(R.id.store);
+        String storename=getIntent().getStringExtra("storename");
+        store.setText(storename);
+
+        stored_id=(EditText)findViewById(R.id.store_id);
         String store_id=getIntent().getStringExtra("storeid");
         stored_id.setText(store_id);
 
@@ -87,12 +94,13 @@ public class Appointment extends AppCompatActivity {
 
                 if (userProfile != null){
                     String fullName = userProfile.fullName;
+                    String lastName=userProfile.lastname;
                     String address = userProfile.address;
                     String contact = userProfile.contact;
                     String email = userProfile.email;
 
                     app_name.setText(fullName);
-                    app_lname.setText(fullName);
+                    app_lname.setText(lastName);
                     app_address.setText(address);
                     app_contact.setText(contact);
                     app_email.setText(email);
@@ -135,7 +143,7 @@ public class Appointment extends AppCompatActivity {
             str_time=time.getText().toString().trim();
             str_landmark = landmark.getText().toString().trim();
             str_service = auto_service.getText().toString().trim();
-
+            str_store= store.getText().toString().trim();
             StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
@@ -168,6 +176,7 @@ public class Appointment extends AppCompatActivity {
                 params.put("landmark", str_landmark);
                 params.put("contact", str_contact);
                 params.put("service", str_service);
+                params.put("storename", str_store);
                 return params;
             }
             };

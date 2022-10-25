@@ -48,8 +48,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         register.setOnClickListener(this);
         mAuth = FirebaseAuth.getInstance();
         if (mAuth.getCurrentUser() != null) {
-            startActivity(new Intent(MainActivity.this, profile.class));
-            finish();
+            Intent i = new Intent(MainActivity.this, profile.class);
+            i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(i);
+
+
         }
 
         storelink=(TextView) findViewById(R.id.store_link);
@@ -127,6 +130,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }else{
                     Toast.makeText(MainActivity.this, "Failed to login! Plese check your crendentials", Toast.LENGTH_LONG).show();
                 }
+                progressBar.setVisibility(View.GONE);
 
             }
         });

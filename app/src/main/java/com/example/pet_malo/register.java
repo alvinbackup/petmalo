@@ -135,7 +135,7 @@ public class register extends AppCompatActivity implements View.OnClickListener 
                                 public void onComplete(@NonNull Task<Void> task) {
 
                                     if(task.isSuccessful()){
-                                        Toast.makeText(register.this, " User has been REGISTERED!", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(register.this, " User Has Been REGISTERED!", Toast.LENGTH_LONG).show();
                                     progressBar.setVisibility(View.GONE);
 
                                         //redirect to login Layout!
@@ -156,4 +156,6 @@ public class register extends AppCompatActivity implements View.OnClickListener 
                 });
 
         }
+
+
 }

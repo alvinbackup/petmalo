@@ -43,123 +43,133 @@
                     android:textSize="20dp"
                     android:textStyle="bold"
                     />
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Pet Name"
+                    app:boxStrokeColor="@color/blue"
+                    app:hintTextColor="@color/darkblue"
+                    app:boxBackgroundColor="@color/white"
+                    android:backgroundTint="@color/darkblue"
+                    android:textSize="14sp"
+                    android:textColor="@color/darkblue"
+                    app:startIconDrawable="@drawable/petname_icon"
+                    app:startIconTint="@color/blue"
+                    android:textColorHint="#837171"
 
-                <EditText
+                    android:layout_marginBottom="20dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    >
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/petname"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:paddingStart="10dp"
-                    android:drawableStart="@drawable/petname_icon"
-                    android:textColorHint="#837171"
-                    android:drawablePadding="10dp"
+                    android:layout_height="wrap_content"
                     android:ems="10"
                     android:textSize="14sp"
-                    android:textColor="@color/black"
-                    android:background="@drawable/custom_input"
                      />
+                </com.google.android.material.textfield.TextInputLayout>
 
-
-                <TextView
-                    android:layout_width="wrap_content"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
-                    android:text="Birthday:"
+                    android:hint="Birth Date"
+                    app:boxStrokeColor="@color/blue"
+                    app:hintTextColor="@color/darkblue"
+                    app:boxBackgroundColor="@color/white"
+                    android:backgroundTint="@color/darkblue"
+                    android:textSize="14sp"
                     android:textColor="@color/darkblue"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
-
-                <EditText
+                    app:startIconDrawable="@drawable/birthday_icon"
+                    app:startIconTint="@color/blue"
+                    android:textColorHint="#837171"
+                    android:layout_marginBottom="20dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    >
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/birthday"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:paddingStart="10dp"
-                    android:layout_gravity="right"
-                    android:textColorHint="#837171"
-                    android:drawableStart="@drawable/birthday_icon"
-                    android:drawablePadding="10dp"
+                    android:layout_height="wrap_content"
                     android:ems="10"
                     android:textSize="14sp"
-                    android:textColor="@color/black"
-                    android:background="@drawable/custom_input"
                     android:clickable="false"
                     android:cursorVisible="false"
                     android:focusable="false"
                     android:focusableInTouchMode="false"/>
+                </com.google.android.material.textfield.TextInputLayout>
 
-
-                <TextView
-                    android:layout_width="wrap_content"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
-                    android:text="Gender:"
+                    android:hint="Gender"
+                    app:boxStrokeColor="@color/blue"
+                    app:hintTextColor="@color/darkblue"
+                    app:boxBackgroundColor="@color/white"
+                    android:backgroundTint="@color/darkblue"
+                    android:textSize="14sp"
                     android:textColor="@color/darkblue"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
-
-                <EditText
+                    app:startIconDrawable="@drawable/gender_icon"
+                    app:startIconTint="@color/blue"
+                    android:textColorHint="#837171"
+                    android:layout_marginBottom="20dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    >
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/gender"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_gravity="right"
-                    android:drawableStart="@drawable/gender_icon"
-                    android:textColorHint="#837171"
-                    android:drawablePadding="10dp"
+                    android:layout_height="wrap_content"
                     android:ems="10"
                     android:textSize="14sp"
-                    android:textColor="@color/black"
-                    android:paddingStart="10dp"
-                    android:background="@drawable/custom_input"
                    />
-
-                <TextView
-                    android:layout_width="wrap_content"
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
-                    android:text="Breed:"
+                    android:hint="Breed"
+                    app:boxStrokeColor="@color/blue"
+                    app:hintTextColor="@color/darkblue"
+                    app:boxBackgroundColor="@color/white"
+                    android:backgroundTint="@color/darkblue"
+                    android:textSize="14sp"
                     android:textColor="@color/darkblue"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
-
-                <EditText
+                    app:startIconDrawable="@drawable/species"
+                    app:startIconTint="@color/blue"
+                    android:textColorHint="#837171"
+                    android:layout_marginBottom="20dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    >
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/breed"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_gravity="right"
-                    android:background="@drawable/custom_input"
-                    android:drawableStart="@drawable/petname_icon"
-                    android:paddingStart="10dp"
-                    android:drawablePadding="10dp"
+                    android:layout_height="wrap_content"
                     android:ems="10"
                     android:textSize="14sp"
-                    android:textColor="@color/black"
-                    android:textColorHint="#837171" />
-
-                <TextView
-                    android:layout_width="wrap_content"
+                     />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
-
-                    android:text="Species"
+                    android:hint="Species"
+                    app:boxStrokeColor="@color/blue"
+                    app:hintTextColor="@color/darkblue"
+                    app:boxBackgroundColor="@color/white"
+                    android:backgroundTint="@color/darkblue"
+                    android:textSize="14sp"
                     android:textColor="@color/darkblue"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
-
-
-                <EditText
+                    app:startIconDrawable="@drawable/species"
+                    app:startIconTint="@color/blue"
+                    android:textColorHint="#837171"
+                    android:layout_marginBottom="20dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    >
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/species"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_gravity="right"
-                    android:layout_marginBottom="25dp"
-                    android:textColorHint="#837171"
-                    android:drawablePadding="10dp"
+                    android:layout_height="wrap_content"
                     android:ems="10"
                     android:textSize="14sp"
-                    android:textColor="@color/black"
-                    android:background="@drawable/custom_input"
-                    android:drawableStart="@drawable/species"
-                    android:paddingStart="10dp"
+
                     />
+                </com.google.android.material.textfield.TextInputLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
@@ -176,107 +186,106 @@
                         android:textStyle="bold"/>
                 </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
-                    android:text="Date:"
+                    android:hint="Date"
+                    app:boxStrokeColor="@color/blue"
+                    app:hintTextColor="@color/darkblue"
+                    app:boxBackgroundColor="@color/white"
+                    android:backgroundTint="@color/darkblue"
+                    android:textSize="14sp"
                     android:textColor="@color/darkblue"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
-
-                <EditText
+                    app:startIconDrawable="@drawable/date_icon"
+                    app:startIconTint="@color/blue"
+                    android:textColorHint="#837171"
+                    android:layout_marginBottom="20dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    >
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/date"
                     android:layout_width="match_parent"
-                    android:paddingStart="10dp"
-                    android:layout_height="45dp"
-                    android:layout_gravity="right"
-                    android:textColorHint="#837171"
-                    android:drawablePadding="10dp"
+                    android:layout_height="wrap_content"
                     android:ems="10"
                     android:textSize="14sp"
-                    android:textColor="@color/black"
-                    android:drawableStart="@drawable/date_icon"
-                    android:background="@drawable/custom_input"
                     android:clickable="false"
                     android:cursorVisible="false"
                     android:focusable="false"
                     android:focusableInTouchMode="false"/>
 
-
-                <TextView
-                    android:layout_width="wrap_content"
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
-                    android:text="Againts:"
+                    android:hint="Againts"
+                    app:boxStrokeColor="@color/blue"
+                    app:hintTextColor="@color/darkblue"
+                    app:boxBackgroundColor="@color/white"
+                    android:backgroundTint="@color/darkblue"
+                    android:textSize="14sp"
                     android:textColor="@color/darkblue"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
-
-                <EditText
+                    app:startIconDrawable="@drawable/againts_icon"
+                    app:startIconTint="@color/blue"
+                    android:textColorHint="#837171"
+                    android:layout_marginBottom="20dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    >
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/againts"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_gravity="right"
-                    android:textColorHint="#837171"
-                    android:drawablePadding="10dp"
+                    android:layout_height="wrap_content"
                     android:ems="10"
                     android:textSize="14sp"
-                    android:textColor="@color/black"
-                    android:background="@drawable/custom_input"
-                    android:drawableStart="@drawable/againts_icon"
-                    android:paddingStart="10dp"
                      />
-
-                <TextView
-                    android:layout_width="wrap_content"
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
-                    android:text="Manufacturer:"
+                    android:hint="Manufacturer"
+                    app:boxStrokeColor="@color/blue"
+                    app:hintTextColor="@color/darkblue"
+                    app:boxBackgroundColor="@color/white"
+                    android:backgroundTint="@color/darkblue"
+                    android:textSize="14sp"
                     android:textColor="@color/darkblue"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
-
-                <EditText
+                    app:startIconDrawable="@drawable/manufacturer"
+                    app:startIconTint="@color/blue"
+                    android:textColorHint="#837171"
+                    android:layout_marginBottom="20dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    >
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/manufacturer"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_gravity="right"
-                    android:background="@drawable/custom_input"
-                    android:drawablePadding="10dp"
-                    android:ems="10"
-                    android:textColor="@color/black"
-                    android:textColorHint="#837171"
-                    android:textSize="14sp"
-                    android:paddingStart="10dp"
-                    android:drawableStart="@drawable/manufacturer"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="25dp"
-
-                    android:text="Veterinarian:"
+                    android:ems="10"
+                    android:textSize="14sp"
+                   />
+                </com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Veterinarian"
+                    app:boxStrokeColor="@color/blue"
+                    app:hintTextColor="@color/darkblue"
+                    app:boxBackgroundColor="@color/white"
+                    android:backgroundTint="@color/darkblue"
+                    android:textSize="14sp"
                     android:textColor="@color/darkblue"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
-
-
-                <EditText
+                    app:startIconDrawable="@drawable/vet"
+                    app:startIconTint="@color/blue"
+                    android:textColorHint="#837171"
+                    android:layout_marginBottom="20dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    >
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/veterinarian"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:layout_gravity="right"
-                    android:layout_marginBottom="25dp"
-                    android:background="@drawable/custom_input"
-                    android:paddingStart="10dp"
-                    android:drawablePadding="10dp"
+                    android:layout_height="wrap_content"
                     android:ems="10"
                     android:textSize="14sp"
-                    android:textColor="@color/black"
-                    android:drawableStart="@drawable/vet"
-                    android:textColorHint="#837171" />
-
+                     />
+                </com.google.android.material.textfield.TextInputLayout>
                 <Button
                     android:id="@+id/submit"
                     android:layout_width="wrap_content"

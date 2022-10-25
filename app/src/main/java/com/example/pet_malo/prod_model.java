@@ -1,11 +1,11 @@
 package com.example.pet_malo;
 
 public class prod_model {
-    String p_id, prod_id,product_categ,product_name,price,description,stock,image;
+    String p_id, prod_id,product_categ,product_name,price,description,stock,image,store;
 
 
 
-    public prod_model(String p_id, String prod_id, String product_categ, String product_name, String price, String description, String stock, String image) {
+    public prod_model(String p_id, String prod_id, String product_categ, String product_name, String price, String description, String stock, String image, String store) {
         this.p_id = p_id;
         this.prod_id = prod_id;
         this.product_categ = product_categ;
@@ -14,6 +14,7 @@ public class prod_model {
         this.description = description;
         this.stock = stock;
         this.image = image;
+        this.store = store;
     }
 
     public String getP_id() {
@@ -78,5 +79,12 @@ public class prod_model {
 
     public void setImage(String image) {
         this.image = image;
+    }
+    public String getStore() {
+        return store;
+    }
+
+    public void setStore(String store) {
+        this.store = store;
     }
 }

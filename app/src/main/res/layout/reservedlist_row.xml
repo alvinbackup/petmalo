@@ -3,8 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@drawable/reserved_shape"
+    android:background="@drawable/white_shape"
     android:layout_marginHorizontal="10dp"
+    android:layout_marginVertical="5dp"
+
   >
 
 <LinearLayout
@@ -105,10 +107,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Description"
-        android:textSize="30sp"
+        android:textSize="11sp"
         android:id="@+id/resprod_desc"
         android:layout_gravity="center"
-        android:visibility="gone"/>
+        android:visibility="gone"
+       />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -126,12 +129,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/contact"/>
+        android:id="@+id/contact"
+        android:visibility="gone"/>
     <TextView
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/address"/>
+        android:id="@+id/address"
+        android:visibility="gone"/>
 </LinearLayout>
 </LinearLayout>
 </LinearLayout>

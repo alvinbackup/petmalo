@@ -9,7 +9,7 @@ public class Storesmarker {
     @SerializedName("id")
     @Expose
     public String id;
-    @SerializedName("name")
+    @SerializedName("Store_Name")
     @Expose
     public String Store_name;
     @SerializedName("description")

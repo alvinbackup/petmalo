@@ -27,7 +27,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 public class petlist extends AppCompatActivity {
-    private static final String url="https://christoherhonrado.000webhostapp.com/android_map_markers/petcard_list.php";
+    private static final String url="https://pet-shop-management.000webhostapp.com/android_map_markers/petcard_list.php";
     RecyclerView recview;
     private LinearLayout emptyView;
 
@@ -89,6 +89,8 @@ public class petlist extends AppCompatActivity {
 
                       petlist_adapter adapter = new petlist_adapter(data);
                       recview.setAdapter(adapter);
+
+
                 if(data.length<1) {
                     recview.setVisibility(View.GONE);
                     emptyView.setVisibility(View.VISIBLE);

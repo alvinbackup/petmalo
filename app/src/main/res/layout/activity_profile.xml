@@ -93,7 +93,7 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:scaleType="fitXY"
-                    android:src="@drawable/myappointmenticon" />
+                    android:src="@drawable/appointment2" />
 
                 <TextView
 
@@ -141,17 +141,7 @@
                         android:scaleType="fitXY"
                         android:src="@drawable/reserveicon" />
 
-                    <TextView
-                        android:id="@+id/count"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignTop="@+id/mem"
-                        android:layout_alignRight="@+id/mem"
-                        android:background="@drawable/product_badge"
-                        android:text="10"
-                        android:textColor="@color/white"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
+
                 </RelativeLayout>
 
                 <TextView

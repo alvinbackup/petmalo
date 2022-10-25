@@ -38,16 +38,14 @@ public class petcard extends AppCompatActivity {
     Calendar calendar;
     String str_name, str_birthday, str_gender, str_breed, str_species, str_date, str_manufacturer, str_againts, str_veterinarian;
 
-    private static final String url = "https://christoherhonrado.000webhostapp.com/petcard.php";
+    private static final String url = "https://pet-shop-management.000webhostapp.com/android_map_markers/petcard.php";
 
-    protected void onCreate(Bundle savedInstanceState) {
+        protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_petcard);
 
         getSupportActionBar().setTitle(Html.fromHtml("<font color='#0F2350'>Pet Card</font>"));
-
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.orange)));
-
         pet_name = findViewById(R.id.petname);
 
         pet_gender = findViewById(R.id.gender);

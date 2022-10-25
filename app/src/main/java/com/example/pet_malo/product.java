@@ -31,7 +31,7 @@ public class product extends AppCompatActivity {
 
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
-    TextView storeid, categ;
+    TextView storeid, categ, store;
     ImageView noproduct;
 
     @Override
@@ -49,6 +49,11 @@ public class product extends AppCompatActivity {
         noproduct=(ImageView)findViewById(R.id.noproduct);
         storeid=(TextView)findViewById(R.id.store_id);
 
+        store=(TextView)findViewById(R.id.store);
+
+        String storename=getIntent().getStringExtra("storename");
+        store.setText(storename);
+
         processdata(getIntent().getStringExtra("store_id"),getIntent().getStringExtra("category"));
 
 
@@ -58,7 +63,7 @@ public class product extends AppCompatActivity {
     {
         Uri.Builder builder = new Uri.Builder();
         builder.scheme("https")
-                .authority("christoherhonrado.000webhostapp.com")
+                .authority("pet-shop-management.000webhostapp.com")
                 .appendPath("android_map_markers")
                 .appendPath("products_mob_con.php")
                 .appendQueryParameter("prod_id",store_id)

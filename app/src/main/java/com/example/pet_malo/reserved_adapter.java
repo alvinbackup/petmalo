@@ -17,7 +17,6 @@ import org.jetbrains.annotations.NotNull;
 public class reserved_adapter extends RecyclerView.Adapter<reserved_adapter.reserve_holder>
 {
     reservedlist_model data[];
-    reservedlist_model dataall;
 
     public reserved_adapter(reservedlist_model[] data) {
         this.data = data;
@@ -43,7 +42,7 @@ public class reserved_adapter extends RecyclerView.Adapter<reserved_adapter.rese
         holder.cust_name.setText(data[position].getCust_name());
         holder.cust_contact.setText(data[position].getCust_contact());
         holder.cust_add.setText(data[position].getCust_add());
-        Glide.with(holder.res_name.getContext()).load("https://petmalo.000webhostapp.com/examples/upload/"+data[position].getProd_image()).into(holder.img);
+        Glide.with(holder.res_name.getContext()).load("https://pet-shop-management.000webhostapp.com/examples/upload/"+data[position].getProd_image()).into(holder.img);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,8 +53,10 @@ public class reserved_adapter extends RecyclerView.Adapter<reserved_adapter.rese
                 intent.putExtra("order_custname",data[position].getCust_name());
                 intent.putExtra("order_custcon",data[position].getCust_contact());
                 intent.putExtra("order_custadd",data[position].getCust_add());
+                intent.putExtra("orderdd",data[position].getRev_desc());
+                intent.putExtra("ordertt",data[position].getProd_total());
 
-                intent.putExtra("img","https://petmalo.000webhostapp.com/examples/upload/"+data[position].getProd_image());
+                intent.putExtra("img","https://pet-shop-management.000webhostapp.com/examples/upload/"+data[position].getProd_image());
 
                 view.getContext().startActivity(intent);
             }

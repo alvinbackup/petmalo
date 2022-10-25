@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/loginreg"
+    android:background="@color/white"
     tools:context=".petlist">
     <LinearLayout
         android:id="@+id/empty"
@@ -17,10 +17,11 @@
         >
 
     </LinearLayout>
+
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/recview"/>
+        android:layout_height="match_parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/home_nav"

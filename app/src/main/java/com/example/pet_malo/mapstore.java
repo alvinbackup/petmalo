@@ -78,7 +78,7 @@ HashMap<String, String> mMarker=new HashMap<String, String>();
 
 
 //marker link for the markers in database
-    private String URL = "https://christoherhonrado.000webhostapp.com/android_map_markers/all.php";
+    private String URL = "https://pet-shop-management.000webhostapp.com/android_map_markers/all.php";
     RequestQueue requestQueue;
     Gson gson;
     Storesmarker[] storesmarkers;

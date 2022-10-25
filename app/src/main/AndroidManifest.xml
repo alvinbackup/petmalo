@@ -19,6 +19,15 @@
         android:theme="@style/Theme.PETMalo"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".upload_profile"
+            android:exported="false" />
+        <activity
+            android:name=".appointment_details"
+            android:exported="false" />
+        <activity
+            android:name=".appointment_list"
+            android:exported="false" />
+        <activity
             android:name=".order_details"
             android:exported="false" />
         <activity

@@ -40,14 +40,14 @@ public class petcare_adapter extends RecyclerView.Adapter<petcare_adapter.petcar
     public void onBindViewHolder(@NonNull  petcareviewholder holder,int position) {
         holder.name.setText(data[position].getTitle());
         holder.desc.setText(data[position].getDescription());
-        Glide.with(holder.name.getContext()).load("https://petmalo.000webhostapp.com/examples/upload/"+data[position].getImages()).into(holder.img);
+        Glide.with(holder.name.getContext()).load("https://pet-shop-management.000webhostapp.com/examples/upload/"+data[position].getImages()).into(holder.img);
          holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(),petcare_detailed.class);
                 intent.putExtra("title",data[position].getTitle());
                 intent.putExtra("desc",data[position].getDescription());
-                intent.putExtra("img","https://petmalo.000webhostapp.com/examples/upload/"+data[position].getImages());
+                intent.putExtra("img","https://pet-shop-management.000webhostapp.com/examples/upload/"+data[position].getImages());
                 view.getContext().startActivity(intent);
 
 

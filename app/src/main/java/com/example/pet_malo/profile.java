@@ -144,7 +144,8 @@ public class profile extends AppCompatActivity {
         }return true;
     }
     public void openappointment(){
-        Intent intent = new Intent(this,Appointment.class);
+        Intent intent = new Intent(this,appointment_list.class);
+        intent.putExtra("useremail",email_iden.getText().toString());
         startActivity(intent);
     }
     public void openprofile(){

@@ -11,7 +11,9 @@
     <color name="darkblue">#0F2350</color>
     <color name="red">#F44336</color>
     <color name="gray">#B3ACAC</color>
-    <color name="blue">#2196F3</color>
+    <color name="blue">#0A71C2</color>
     <color name="pastel">#FFBF00</color>
     <color name="notthatwhite">#F5F5F5</color>
+    <color name="green">#4CAF50</color>
+    <color name="orange2">#B7FEDEBE</color>
 </resources>

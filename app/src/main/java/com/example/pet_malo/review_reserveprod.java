@@ -45,14 +45,14 @@ import pl.droidsonroids.gif.GifImageView;
 public class review_reserveprod extends AppCompatActivity {
     //Variables
 private TextView rev_price,rev_name,rev_desc,rev_categ,rev_quan,rev_storeid,result,image_text;
-private TextView FullnameTextView, AddressTextView,ContactTextView,emailTextView;
+private TextView FullnameTextView,LastnameTextView, AddressTextView,ContactTextView,emailTextView;
    private EditText autoD8;
     //URL
-private static  final String url ="https://christoherhonrado.000webhostapp.com/android_map_markers/reserved_product_con.php";
+private static  final String url ="https://pet-shop-management.000webhostapp.com/android_map_markers/reserved_product_con.php";
 private ImageView re_img;
 // POST string
 String str_name,str_total,str_desc,str_categ,str_quan,str_storeid,str_custname,str_custadd,str_custcontact,str_custemail,
-           date_reserved,str_image;
+           date_reserved,str_image,str_lname;
 
     private FirebaseUser user;
     private DatabaseReference reference;
@@ -109,7 +109,7 @@ result.setText(Double.toString(sum));
 
 
         String revimg=getIntent().getStringExtra("rev_img");
-        Glide.with(review_reserveprod.this).load("https://christoherhonrado.000webhostapp.com/examples/upload/"+revimg).into(re_img);
+        Glide.with(review_reserveprod.this).load("https://pet-shop-management.000webhostapp.com/examples/upload/"+revimg).into(re_img);
 
 
         user = FirebaseAuth.getInstance().getCurrentUser();
@@ -117,6 +117,7 @@ result.setText(Double.toString(sum));
         userID = user.getUid();
 
         FullnameTextView = (TextView) findViewById(R.id.user_name);
+        LastnameTextView=(TextView)findViewById(R.id.last_name);
         AddressTextView = (TextView) findViewById(R.id.user_address);
          ContactTextView = (TextView) findViewById(R.id.user_conatct);
          emailTextView = (TextView) findViewById(R.id.user_email);
@@ -129,11 +130,13 @@ result.setText(Double.toString(sum));
 
                 if (userProfile != null){
                     String Name = userProfile.fullName;
+                    String Lastname= userProfile.lastname;
                     String Address = userProfile.address;
                     String Contact = userProfile.contact;
                     String Email = userProfile.email;
 
                     FullnameTextView.setText(Name);
+                    LastnameTextView.setText(Lastname);
                     AddressTextView.setText(Address);
                     ContactTextView.setText(Contact);
                     emailTextView.setText(Email);
@@ -162,6 +165,7 @@ result.setText(Double.toString(sum));
         str_quan = rev_quan.getText().toString();
         str_categ = rev_categ.getText().toString();
         str_custname = FullnameTextView.getText().toString();
+        str_lname=LastnameTextView.getText().toString();
         str_custadd = AddressTextView.getText().toString();
         str_custcontact = ContactTextView.getText().toString();
         str_custemail = emailTextView.getText().toString();
@@ -210,7 +214,7 @@ result.setText(Double.toString(sum));
             params.put("cust_add", str_custadd);
             params.put("cust_contact", str_custcontact);
             params.put("cust_email", str_custemail);
-
+            params.put("cust_lname",str_lname);
             params.put("store_id", str_storeid);
             params.put("prod_total", str_total);
             params.put("date_reserved", date_reserved);

@@ -7,7 +7,8 @@
     tools:context=".product_details"
     android:orientation="vertical"
     android:background="@color/white"
-    android:padding="20dp">
+    android:paddingHorizontal="20dp"
+    android:paddingTop="20dp">
 
     <ImageView
         android:background="@color/white"
@@ -133,7 +134,7 @@
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="10dp"
         android:layout_marginTop="10dp"
@@ -157,6 +158,48 @@
                 android:textSize="12sp"
                 android:textColor="@color/black"
                 android:id="@id/prod_desc"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="image"
+                android:id="@+id/text_image"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="image"
+                android:id="@+id/storename"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:weightSum="100"
+            android:gravity="center|bottom">
+
+            <Button
+                android:layout_weight="50"
+                android:layout_marginRight="10dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Add to Cart"
+                android:layout_gravity="center|bottom"
+                android:id="@+id/add_cart"
+                android:textSize="12sp"
+                android:drawableLeft="@drawable/mycart"
+                android:backgroundTint="@color/darkblue"
+                />
+
+            <Button
+                android:layout_weight="50"
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+                android:text="Reserved"
+                android:layout_gravity="center|bottom"
+                android:id="@+id/btn_reserve"
+               />
         </LinearLayout>
     </LinearLayout>
     <TextView
@@ -165,26 +208,8 @@
         android:text="id"
         android:id="@+id/prod_id"
         android:visibility="gone"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="image"
-        android:id="@+id/text_image"
-        android:visibility="gone"/>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="0dip"
-    android:layout_weight="1"
-    android:gravity="center|bottom">
 
-<Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Reserved Item"
-    android:layout_gravity="center|bottom"
-    android:id="@+id/btn_reserve"/>
 
-   </LinearLayout>
 
 
 </LinearLayout>

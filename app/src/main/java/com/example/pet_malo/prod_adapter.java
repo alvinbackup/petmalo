@@ -45,8 +45,9 @@ public class prod_adapter extends RecyclerView.Adapter<prod_adapter.prodviewhold
         holder.prod_desc.setText(data[position].getDescription());
         holder.prod_id.setText(data[position].getProd_id());
         holder.prod_categ.setText(data[position].getProduct_categ());
+        holder.store_name.setText(data[position].getStore());
 
-        Glide.with(holder.prod_name.getContext()).load("https://christoherhonrado.000webhostapp.com/examples/upload/"+data[position].getImage()).into(holder.prod_image);
+        Glide.with(holder.prod_name.getContext()).load("https://pet-shop-management.000webhostapp.com/examples/upload/"+data[position].getImage()).into(holder.prod_image);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,6 +60,7 @@ public class prod_adapter extends RecyclerView.Adapter<prod_adapter.prodviewhold
                 intent.putExtra("prod_categ",data[position].getProduct_categ());
                 intent.putExtra("prod_id",data[position].getProd_id());
                 intent.putExtra("img",data[position].getImage());
+                intent.putExtra("store_name",data[position].getStore());
                 view.getContext().startActivity(intent);
             }
         });
@@ -77,7 +79,7 @@ public class prod_adapter extends RecyclerView.Adapter<prod_adapter.prodviewhold
     {
 
        ImageView prod_image;
-       TextView prod_name, prod_price,prod_desc, prod_stock,prod_id,prod_categ;
+       TextView prod_name, prod_price,prod_desc, prod_stock,prod_id,prod_categ,store_name;
         public prodviewholder(@NonNull @NotNull View itemView) {
             super(itemView);
             prod_image=itemView.findViewById(R.id.prod_img);
@@ -87,6 +89,8 @@ public class prod_adapter extends RecyclerView.Adapter<prod_adapter.prodviewhold
             prod_stock=itemView.findViewById(R.id.prod_stock);
             prod_id=itemView.findViewById(R.id.product_id);
             prod_categ=itemView.findViewById(R.id.prod_categ);
+            store_name=itemView.findViewById(R.id.name_store);
+
 
 
 

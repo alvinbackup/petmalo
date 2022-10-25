@@ -12,6 +12,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -26,7 +27,7 @@ import com.google.gson.GsonBuilder;
 
 public class petcare extends AppCompatActivity {
 
-
+    private LinearLayout emptyView;
     RecyclerView recyclerView;
     RecyclerView.LayoutManager layoutManager;
 TextView storeids;
@@ -36,6 +37,9 @@ TextView storeids;
         setContentView(R.layout.activity_petcare);
         getSupportActionBar().setTitle("Pet Care");
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.orange)));
+
+        emptyView = (LinearLayout) findViewById(R.id.emptycare);
+
         recyclerView=(RecyclerView)findViewById(R.id.recview);
         layoutManager=new GridLayoutManager(this,2);
         recyclerView.setLayoutManager(layoutManager);
@@ -46,7 +50,7 @@ TextView storeids;
     {
         Uri.Builder builder = new Uri.Builder();
         builder.scheme("https")
-                .authority("christoherhonrado.000webhostapp.com")
+                .authority("pet-shop-management.000webhostapp.com")
                 .appendPath("android_map_markers")
                 .appendPath("petcare_jsonselect.php")
                 .appendQueryParameter("care_id", stid);
@@ -61,6 +65,11 @@ TextView storeids;
 
                 petcare_adapter adapter=new petcare_adapter(data);
                 recyclerView.setAdapter(adapter);
+
+                if(data.length<1) {
+                    recyclerView.setVisibility(View.GONE);
+                    emptyView.setVisibility(View.VISIBLE);
+                }
 
             }
         }, new Response.ErrorListener() {

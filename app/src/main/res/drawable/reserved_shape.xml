@@ -27,7 +27,13 @@
 </padding>
         </shape>
     </item>
-    <corners>
-    </corners>
+    <item>
+        <shape>
 
+
+    <corners
+        android:radius="10dp">
+    </corners>
+        </shape>
+    </item>
 </layer-list>

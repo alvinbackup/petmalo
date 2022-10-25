@@ -26,7 +26,7 @@ public class petlist_adapter extends RecyclerView.Adapter<petlist_adapter.myview
 
     @Override
     public void onBindViewHolder(@NonNull myviewholder holder, int position) {
-     holder.petlist_name.setText(data[position].getName());
+      holder.petlist_name.setText(data[position].getName());
         holder.petlist_email.setText(data[position].getCust_email());
         holder.petlist_birthday.setText(data[position].getBirthday());
         holder.petlist_gender.setText(data[position].getGender());

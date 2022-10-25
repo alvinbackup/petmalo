@@ -235,7 +235,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:text="id "
+        android:text="id"
+        android:visibility="gone"
         android:id="@+id/rev_storeid"
         android:textColor="@color/black"
         />
@@ -244,6 +245,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:visibility="gone"
             android:inputType="textAutoComplete"/>
 
     <LinearLayout
